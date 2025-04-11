@@ -1,0 +1,7 @@
+﻿tests/
+docs/
+*.log
+*.ts
+*.map
+.gitignore
+.github/
