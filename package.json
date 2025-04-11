@@ -5,6 +5,9 @@
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "type": "module",
+  "files": [
+    "dist/"
+  ],
   "scripts": {
     "dev": "bun run src/index.ts",
     "build": "bun run clean && bun build src/index.ts --outdir ./dist --target node && bun run build:types",
