@@ -1,18 +1,26 @@
 {
   "name": "bug-me-sdk-ts",
-  "module": "src/index.ts",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
   "type": "module",
   "scripts": {
     "dev": "bun run src/index.ts",
-    "build": "bun run clean && bun build src/index.ts --outdir ./dist",
-    "build:types": "tsc --outdir ./dist",
+    "build": "bun run clean && bun build src/index.ts --outdir ./dist --target node && bun run build:types",
+    "build:types": "tsc --project tsconfig.types.json",
     "prepublish": "bun run build && bun run build:types",
     "clean": "rm -rf dist"
   },
   "devDependencies": {
-    "@types/bun": "latest"
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^11.0.1",
+    "@types/bun": "latest",
+    "semantic-release": "^24.2.3",
+    "typescript": "^5.0.0"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
-  }
+  },
+  "author": "buildcell"
 }

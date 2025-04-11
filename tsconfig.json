@@ -15,6 +15,7 @@
     "noEmit": true,
     "emitDeclarationOnly": true,
     "declaration": true,
+    "declarationDir": "./dist",
     "outDir": "./dist",
     "rootDir": "./src",
     "types": ["bun-types"],
@@ -27,8 +28,9 @@
     // Some stricter flags (disabled by default)
     "noUnusedLocals": false,
     "noUnusedParameters": false,
-    "noPropertyAccessFromIndexSignature": false
+    "noPropertyAccessFromIndexSignature": false,
+    "experimentalDecorators": true,
   },
-  "include": ["src/**/*.ts"],
+  "include": ["src/**/*"],
   "exclude": ["node_modules"]
 }
