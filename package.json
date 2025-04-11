@@ -22,5 +22,8 @@
   "peerDependencies": {
     "typescript": "^5.0.0"
   },
-  "author": "buildcell"
+  "author": "buildcell",
+  "dependencies": {
+    "ms": "^2.1.3"
+  }
 }
